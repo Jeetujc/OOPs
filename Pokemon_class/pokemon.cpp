@@ -127,7 +127,7 @@ pair<pokemon,pokemon> duel(pokemon &a, pokemon &b) {
     else if (b_damage > a_damage) {
         b.xp += 10;
         a.xp += 2;
-        p=make_pair(a,b);
+        p=make_pair(b,a);
     }
     else {
         a.xp += 5;
