@@ -499,3 +499,50 @@ Why use:
     • not inherited by derived classes
     • does not break encapsulation if used wisely
 */
+
+/*
+# Operator Overloading
+- Operator overloading allows you to redefine the way operators work for user-defined types (like classes)
+- This makes class objects behave like basic data types.
+
+- Operator we can overload:-
+
+    | Operator      | Symbol                           |
+    |---------------|----------------------------------|
+    | Arithmetic    | `+`, `-`, `*`, `/`, `%`          |
+    | Assignment    | `=`, `+=`, `-=`, etc.            |
+    | Comparison    | `==`, `!=`, `<`, `>`, `<=`, `>=` |
+    | Unary         | `++`, `--`, `!`, `-` (negation)  |
+    | Subscript     | `[]`                             |
+    | Function Call | `()`                             |
+    | Stream        | `<<`, `>>`                       |
+
+- We can overload Operators as member function and global function 
+- For classes only assignment(=) op is provided by default
+- Rest should be defined explicitively
+- Cannot overload ::, . (dot), .*, sizeof, typeid
+- Precedence and Associativity cannot be changed
+
+- Some basic rules of Operator overloading:-
+    • 'Arity' cannot be changed (i.e., can’t make the division operator unary)
+    • Can’t overload operators for primitive types (e.g. int, double, etc.)
+    • Can’t create new operators
+    • [], (), ->, and the assignment operator (=) must be declared as member methods
+    • Other operators can be declared as member methods or global (friend) functions
+
+*/
+
+// Syntax
+
+class MyClass {//if declared as Member
+public:
+    MyClass operator+(const MyClass& other) {
+        // logic for +
+    }
+};
+
+/* If declared as Global 
+return_type operator op (parameters) {
+    // body
+}
+*/
