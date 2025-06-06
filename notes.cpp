@@ -530,6 +530,8 @@ Why use:
     • [], (), ->, and the assignment operator (=) must be declared as member methods
     • Other operators can be declared as member methods or global (friend) functions
 
+- Basic Syntax is mentioned below 
+- For detailed refrences refer mystring folder 
 */
 
 // Syntax
