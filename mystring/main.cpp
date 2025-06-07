@@ -11,4 +11,8 @@ int main(){
     }
     a = a+" is OP";
     cout<<a.get_str()<<" : "<<a.get_length()<<endl;
+    mystring jeetu;
+    cin>>jeetu;
+    cout<<jeetu.get_str()<<" : "<<jeetu.get_length()<<endl;
+    cout<<jeetu<<endl;
 }

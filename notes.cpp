@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
 /*
 # Procedural Programming (PP)
 - Follows a top-down approach
@@ -14,11 +13,11 @@ using namespace std;
 - Code reusability is low
 - Hard to manage large and complex applications
 - Focuses on functions
-- easy to break 
+- easy to break
 
 # Object-Oriented Programming (OOP)
 - Follows a bottom-up approach
-- Helps developers model real-world entities 
+- Helps developers model real-world entities
 - Ideal for large applications and unknown data structures
 - instead of thinking about name roll no. etc for student we can think just student
 - Easy to:
@@ -30,13 +29,13 @@ using namespace std;
         • Can create new classes in term of existing
         • Reusability
         • Ex from  main account inheriting for classes like Saving or Current etc.
-        • 
+        •
     • Polymorphism
-        • 
+        •
     • Abstraction
-        • 
+        •
     • Encapsulation
-        • 
+        •
 - Focuses on objects and classes
     • Class = Blueprint (design)
         • User defined data-type
@@ -44,14 +43,14 @@ using namespace std;
         • Has methods = Function
         • Can hide bot attr,methods
     • Object = Instance of class (design comes true)
-        • Created from a class 
+        • Created from a class
             - like if int score we declare score variable
             - if we have Account ex:- class Account Jeetu;
             Jeetu is a variable of Account data type (for understanding)
             Jeetu is a object of Account claa (Actually)
         • Object can use methods of its class
             - Ex vector is class any object from itcan use sort etc through .(dot) operator
-        
+
 */
 
 // Syntax
@@ -59,21 +58,21 @@ using namespace std;
 // This is how we create class
 class Player
 {
-    //This are attributes(Data)
+    // This are attributes(Data)
     string name;
     int health;
     int xp;
-    //Methods
-    void show_xp(){
-        //wap to show xp
+    // Methods
+    void show_xp()
+    {
+        // wap to show xp
     }
-    void hello();//will declare it explicitively
+    void hello(); // will declare it explicitively
 };
 
 Player Jeetu; // Jeetu is object of Player class
 
-Player *Hero = new Player() ; // pointer to the class Create dynamically allocated memory
-
+Player *Hero = new Player(); // pointer to the class Create dynamically allocated memory
 
 /*
 
@@ -82,11 +81,11 @@ Player *Hero = new Player() ; // pointer to the class Create dynamically allocat
     Jeetu.xp=1000;
 
     • For pointers we have 2 methods , 1st derefrencing & then . or using this
-    
+
     (*Hero).name="Hero";//derefrencing and using .
     Hero->health=100;//(->) This operator used for accesing attr and object for pointers
-    Hero->xp=100; 
-    
+    Hero->xp=100;
+
     ∴ Jeetu >> Hero  Hence proved
 
     // Method calling
@@ -102,10 +101,10 @@ For complete refrence see player.cpp
 
 // Ex
 
-vector <Player> players {Jeetu};
+vector<Player> players{Jeetu};
 
-//players.pushback(*hero) to add Hero dunamically
-//player[index].method or attr to access method or attr
+// players.pushback(*hero) to add Hero dunamically
+// player[index].method or attr to access method or attr
 
 /*
 # Class Member Access Modifier
@@ -121,19 +120,16 @@ vector <Player> players {Jeetu};
 
 */
 
-//syntax
+// syntax
 
 class Account
 {
-private://private members
-    
-public://public members
-   
-protected://protected members  
-
+private:   // private members
+public:    // public members
+protected: // protected members
 };
 
-//If we try to access unaccesible (Outside its accessible domain) we get compiler error
+// If we try to access unaccesible (Outside its accessible domain) we get compiler error
 
 /*
 # Implementing Members Method
@@ -142,7 +138,7 @@ protected://protected members
 • Above all are implicitive inline example
 
 - Outside class declaration
-• Can be declasred outside the class 
+• Can be declasred outside the class
 • Syntax:- return type Class-name::method_name
 
 - Seperate specification from implemantation
@@ -151,10 +147,11 @@ protected://protected members
 • Account_class folder for details
 */
 
-//outside declaration example
+// outside declaration example
 
-void Player::hello(){
-    //method to say hello
+void Player::hello()
+{
+    // method to say hello
 }
 
 /*
@@ -164,7 +161,7 @@ void Player::hello(){
 - Used for intialization
 - Same name as the class
 - No return type is specified
-- Can be overloaded 
+- Can be overloaded
 - Default constructor is no arg constructor used when no constructor is written
 - If we create any constructor default will be no longer available
 
@@ -173,7 +170,7 @@ void Player::hello(){
 /*
 # Destructur
 
-- Special member method invoked during object destruction 
+- Special member method invoked during object destruction
 - Used to release memory and other resources
 - Same name as the class with a tilde (~)
 - No return type is specified
@@ -181,7 +178,7 @@ void Player::hello(){
 
 */
 
-//Syntax
+// Syntax
 
 class pokemon
 {
@@ -189,27 +186,26 @@ private:
     string name;
     int health;
     int xp;
+
 public:
-    pokemon(string name);//1 arg constructor
-    pokemon(string s,int hp){//overloading contructor
-        name = s;// this is assignment not intialization
+    pokemon(string name); // 1 arg constructor
+    pokemon(string s, int hp)
+    {             // overloading contructor
+        name = s; // this is assignment not intialization
         health = hp;
     }
-    pokemon() : name  {"none"}, health{0} {//better way its intialization here
-
+    pokemon() : name{"none"}, health{0}
+    { // better way its intialization here
     }
-    //Delegating Constructor
-    //Code for one and can be called in another in the intialization list
-    //avoids duplicating ex:-
-    pokemon(int hp) 
-        : pokemon{"none",hp}
+    // Delegating Constructor
+    // Code for one and can be called in another in the intialization list
+    // avoids duplicating ex:-
+    pokemon(int hp)
+        : pokemon{"none", hp}
     {
-
     }
-    ~pokemon();//destructor
-    
+    ~pokemon(); // destructor
 };
-
 
 /*
 # Copy Constructor
@@ -236,56 +232,66 @@ public:
 - Prefer smart pointers to avoid manual memory management
 
 - Syntax:
-    class_name(const class_name &source); 
+    class_name(const class_name &source);
 */
 
 // Shallow & Deep ex:-
 
-class shallow {
+class shallow
+{
 private:
     int *data;
+
 public:
-    shallow(int d);                    // Constructor
-    shallow(const shallow &source);   // Copy Constructor
-    ~shallow();                        // Destructor
+    shallow(int d);                 // Constructor
+    shallow(const shallow &source); // Copy Constructor
+    ~shallow();                     // Destructor
 };
 
-shallow::shallow(int d) {
+shallow::shallow(int d)
+{
     data = new int;
     *data = d;
 }
 
 shallow::shallow(const shallow &source)
-    : data(source.data) {
+    : data(source.data)
+{
     // ❌ This is a shallow copy
 }
 
-shallow::~shallow() {
+shallow::~shallow()
+{
     delete data;
 }
 
 // ------------------------------------------------
 
-class deep {
+class deep
+{
 private:
     int *data;
+
 public:
-    deep(int d);                      // Constructor
-    deep(const deep &source);        // Deep Copy Constructor
-    ~deep();                         // Destructor
+    deep(int d);              // Constructor
+    deep(const deep &source); // Deep Copy Constructor
+    ~deep();                  // Destructor
 };
 
-deep::deep(int d) {
+deep::deep(int d)
+{
     data = new int;
     *data = d;
 }
 
-deep::deep(const deep &source) {
+deep::deep(const deep &source)
+{
     data = new int;
-    *data = *source.data;  // ✅ Deep copy
+    *data = *source.data; // ✅ Deep copy
 }
 
-deep::~deep() {
+deep::~deep()
+{
     delete data;
 }
 
@@ -296,7 +302,7 @@ deep::~deep() {
 - Optimizes temporary object usage (especially return-by-value)
 - Transfers ownership of resources from source to the new object
 - Avoids deep copying for temporary objects
-- Optional to use but recommended when you have a raw pointer 
+- Optional to use but recommended when you have a raw pointer
 
 - Syntax:
     class_name(class_name &&source); (&& = R-value refrences)
@@ -314,34 +320,40 @@ deep::~deep() {
     • Mark the source object as `&&` (rvalue reference)
 */
 
-class move {
+class move
+{
 private:
     int *data;
+
 public:
     move(int d);
-    move(const move &source);      // Copy Constructor
-    move(move &&source);           // Move Constructor
+    move(const move &source); // Copy Constructor
+    move(move &&source);      // Move Constructor
     ~move();
 };
 
-move::move(int d) {
+move::move(int d)
+{
     data = new int;
     *data = d;
     cout << "Constructor called\n";
 }
 
 move::move(const move &source)
-    : data(new int(*source.data)) {
+    : data(new int(*source.data))
+{
     cout << "Copy Constructor called\n";
 }
 
 move::move(move &&source)
-    : data(source.data) {
-    source.data = nullptr;  // prevent double delete
+    : data(source.data)
+{
+    source.data = nullptr; // prevent double delete
     cout << "Move Constructor called\n";
 }
 
-move::~move() {
+move::~move()
+{
     delete data;
     cout << "Destructor called\n";
 }
@@ -349,11 +361,11 @@ move::~move() {
 /*
 # This pointer
 - Contains address of the object - its pointer to the object
-- Can only use in class scope 
-- All member access is done via this pointer 
+- Can only use in class scope
+- All member access is done via this pointer
 - Usecase:-
     • To access data mem and methods
-    • To check if both obj are same 
+    • To check if both obj are same
     • Can be derefrenced(*this)
 
 balance = bal (this->balance = bal actual code)
@@ -517,7 +529,7 @@ Why use:
     | Function Call | `()`                             |
     | Stream        | `<<`, `>>`                       |
 
-- We can overload Operators as member function and global function 
+- We can overload Operators as member function and global function
 - For classes only assignment(=) op is provided by default
 - Rest should be defined explicitively
 - Cannot overload ::, . (dot), .*, sizeof, typeid
@@ -530,21 +542,39 @@ Why use:
     • [], (), ->, and the assignment operator (=) must be declared as member methods
     • Other operators can be declared as member methods or global (friend) functions
 
-- Basic Syntax is mentioned below 
-- For detailed refrences refer mystring folder 
+- Basic Syntax is mentioned below
+- For detailed refrences refer mystring folder
 */
 
 // Syntax
 
-class MyClass {//if declared as Member
+class MyClass
+{ // if declared as Member
 public:
-    MyClass operator+(const MyClass& other) {
+    MyClass operator+(const MyClass &other)
+    {
         // logic for +
     }
 };
 
-/* If declared as Global 
+/* If declared as Global
 return_type operator op (parameters) {
     // body
 }
+*/
+
+/*
+# Insertion and Extraction Operator Overloading in C++
+- To use cin >> obj and cout << obj with user-defined classes like built-in types
+- Must be global, not member functions
+    • Because in member fnct left operand must be user defined class
+    • s1<<cout seems bit off
+    
+- Usually declared as friend to access private members (like char* str)
+- Use buffer to read into temporary memory, then allocate dynamically
+
+- Syntax:-1
+    friend std::ostream& operator<<(std::ostream& out, const Mystring& obj);
+    friend std::istream& operator>>(std::istream& in, Mystring& obj);
+
 */

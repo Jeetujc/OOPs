@@ -26,6 +26,10 @@ public:
     bool operator==(const mystring &rhs) const;    // Compare
 
     friend mystring operator-(const mystring &obj); // global function delaration to change case of letter
+
+    friend istream& operator>>(std::istream& is, mystring& obj);
+    friend ostream& operator<<(std::ostream& os, const mystring& obj);
+
 };
 
 #endif

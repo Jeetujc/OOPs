@@ -112,3 +112,17 @@ mystring operator-(const mystring& obj) {
     }
     return temp;
 }
+
+istream& operator>>(std::istream& is, mystring& obj){
+    char *buff =new char[1000];
+    is>>buff;
+    obj=mystring{buff};
+    delete [] buff;
+    return is;
+}
+
+ostream& operator<<(std::ostream& os, const mystring& obj){
+    os<<obj.str;
+    return os;
+}
+
