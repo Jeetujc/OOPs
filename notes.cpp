@@ -578,3 +578,5 @@ return_type operator op (parameters) {
     friend std::istream& operator>>(std::istream& in, Mystring& obj);
 
 */
+/*
+*/
