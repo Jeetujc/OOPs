@@ -28,8 +28,25 @@ using namespace std;
     • Inheritance
         • Can create new classes in term of existing
         • Reusability
+        • The new classes contains data and behaviour of the existing class
+        • Allows to modify existing behavior 
         • Ex from  main account inheriting for classes like Saving or Current etc.
-        •
+        • Syntax :-
+            class Account{
+                Account data and logic 
+            };
+            class Saving_Account{
+                additional info like intrest rate;
+            };
+
+        • Single Inheritance 
+            A new class is created from another single class 
+
+        • Multiple Inheritance 
+            A new class is created from two or more classes   
+
+        • Base class also known as parent class its the class being inherited from
+        • Derived class also known as child class its the class created from base class
     • Polymorphism
         •
     • Abstraction
@@ -578,5 +595,6 @@ return_type operator op (parameters) {
     friend std::istream& operator>>(std::istream& in, Mystring& obj);
 
 */
+
 /*
 */
